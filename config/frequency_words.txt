@@ -1,0 +1,66 @@
+# ═══════════════════════════════════════════════════════════════
+#            TrendRadar 频率词配置（预览部署：AI 行业版）
+# 语法：/正则/ => 别名 ；[组名] 为词组命名；!词 过滤；@数字 限条数
+# ═══════════════════════════════════════════════════════════════
+
+[GLOBAL_FILTER]
+震惊
+
+[WORD_GROUPS]
+[OpenAI]
+/\bOpenAI\b|\bChatGPT\b|\bGPT-?5?\b|奥特曼|Altman|Sora\b/ => OpenAI
+
+[Anthropic]
+/\bAnthropic\b|\bClaude\b|Amodei/ => Anthropic
+
+[谷歌]
+/谷歌|\bGoogle\b|\bGemini\b|DeepMind|皮查伊/ => 谷歌
+
+[DeepSeek]
+/DeepSeek|深度求索|梁文锋/ => DeepSeek
+
+[智谱]
+/智谱|\bGLM\b|清言|Z\.ai/ => 智谱
+
+[阿里]
+/通义|千问|\bQwen\b|阿里云/ => 阿里
+
+[字节]
+/豆包|\bCoze\b|扣子|火山引擎|字节的?AI/ => 字节
+
+[其他国产模型]
+/Kimi|月之暗面/ => 月之暗面
+/MiniMax|海螺AI/ => MiniMax
+/讯飞|星火大模型/ => 讯飞
+/腾讯混元|腾讯元宝/ => 腾讯大模型
+/文心一言|文小言/ => 百度大模型
+
+[海外模型]
+/\bxAI\b|\bGrok\b|马斯克/ => xAI
+/\bMeta\b|\bLlama\b/ => Meta
+/Mistral|Perplexity/ => Mistral/Perplexity
+
+[大模型技术]
+/大模型|基座模型|多模态|推理模型|开源模型|万亿参数/ => 大模型
+/Agent|智能体/ => Agent
+/RAG|检索增强|微调|蒸馏|上下文窗口/ => 模型技术
+
+[AI 应用]
+/AI编程|编程智能体|\bCopilot\b|\bCodex\b|Cursor|代码生成/ => AI编程
+/AIGC|文生图|文生视频|图生视频|可灵|即梦/ => AIGC
+/AI搜索|AI助手|AI Agent|智能体产品/ => AI产品
+
+[算力与芯片]
+/英伟达|\bNVIDIA\b|\bCUDA\b|黄仁勋/ => 英伟达
+/算力|芯片|半导体|光刻机|HBM|先进制程/ => 芯片算力
+
+[具身智能]
+/人形机器人|具身智能|宇树|智元/ => 具身智能
+
+[AI 治理]
+/AI安全|对齐|AI监管|人工智能法|深度伪造/ => AI治理
+
+[AI 相关]
+/(?<![a-zA-Z])AI(?![a-zA-Z])/
+人工智能
+@30
