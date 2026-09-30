@@ -185,6 +185,12 @@ jobs:
       # 上游 Actions 模式不回写结果（无 S3 时报告随 runner 丢弃）。此处把 output/ 发布到
       # gh-pages 分支，配合 GitHub Pages 在 https://caijinming.github.io/TrendRadar/ 查看。
       # --------------------------------------------------------------------------------
+      - name: Strip local data (SQLite etc.), publish only the report HTML
+        if: success()
+        run: |
+          rm -rf output/news output/rss output/*.log
+          ls output/
+
       - name: Publish report to GitHub Pages
         if: success()
         uses: peaceiris/actions-gh-pages@v4
